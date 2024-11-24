@@ -37,7 +37,7 @@ public class BookRepository implements JdbcRepository<Book> {
         if (inserted == 1) {
             return book;
         }
-        return null;
+        throw new RuntimeException("Save failed");
     }
 
     @Override
@@ -47,7 +47,7 @@ public class BookRepository implements JdbcRepository<Book> {
         if (updated == 1) {
             return book;
         }
-        return null;
+        throw new RuntimeException("Update failed");
     }
 
     @Override
