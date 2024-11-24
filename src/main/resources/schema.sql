@@ -1,5 +1,5 @@
-drop table if exists public.author;
 drop table if exists public.book;
+drop table if exists public.author;
 
 create table public.author
 (
